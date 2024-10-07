@@ -1,0 +1,158 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: right;
+}
+
+header button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+header button:hover {
+    background-color: #45a049;
+}
+
+main {
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.anotacao, .meta, .venda {
+    width: 90%;
+}
+
+input[disabled], select[disabled] {
+    background-color: #f9f9f9;
+    color: #aaa;
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+    
+    header {
+        text-align: center;
+    }
+
+    header button {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        width: 50%;
+        text-align: left;
+        padding-right: 10px;
+    }
+
+    input[type="text"], select {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .anotacao, .meta, .venda {
+        width: 100%;
+    }
+}
+
+/* Melhorando a visualização em telas menores */
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    header button {
+        padding: 10px;
+    }
+
+    td {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    td::before {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
